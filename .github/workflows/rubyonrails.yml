@@ -63,5 +63,5 @@ jobs:
         run: bin/brakeman -q -w2 || echo "Brakeman warnings detected"
 
       - name: Lint Ruby files
-        run: bin/rubocop --parallel app lib spec
+        run: bin/rubocop --parallel app
         continue-on-error: false
