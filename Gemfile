@@ -59,14 +59,15 @@ gem 'brakeman'
 group :development, :test do
   # Debugging support
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rubocop', require: false
-  gem 'rubocop-capybara', require: false
-  gem 'rubocop-rails', require: false
 end
 
 group :development do
   # Use console on exceptions pages
   gem 'web-console'
+
+  gem 'rubocop', require: false
+  gem 'rubocop-capybara', require: false
+  gem 'rubocop-rails', require: false
 
   # Add speed badges
   gem 'rack-mini-profiler'
