@@ -51,17 +51,10 @@ gem 'sassc-rails'
 gem 'bcrypt', '~> 3.1.7'
 
 # Security checker for project dependencies to detect vulnerabilities
-
 gem 'bundler-audit'
 
 # Static security analysis tool for Ruby on Rails applications
 gem 'brakeman'
-
-# Static security analysis tool for Ruby on Rails applications
-gem 'brakeman'
-
-# Linter for Ruby that checks code style and quality
-gem 'rubocop', require: false
 
 group :development, :test do
   # Debugging support
