@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.6'
+ruby '3.3.2'
 
 # Use a specific version of Rails to ensure compatibility
 gem 'rails'
@@ -73,5 +73,5 @@ group :test do
   # Use system testing
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'webdrivers', '= 5.3.0'
 end
