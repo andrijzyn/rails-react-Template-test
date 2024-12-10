@@ -1,13 +1,21 @@
-import { Controller } from "@hotwired/stimulus";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import App from "../components/App";
+import {Controller} from "@hotwired/stimulus";
 
-// Connects to data-controller="react"
+const App = lazy(() => import("../components/App"));
+
 export default class extends Controller {
   connect() {
     console.log("React controller connected");
     const app = document.getElementById("app");
-    createRoot(app).render(<App />);
+    if (app) {
+      createRoot(app).render(
+          <Suspense fallback={<div>Loading...</div>}>
+            <App />
+          </Suspense>
+      );
+    } else {
+      console.error("Element with id 'app' not found");
+    }
   }
 }
