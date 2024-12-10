@@ -17,6 +17,10 @@ gem 'pg', '~> 1.5', '>= 1.5.6'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma'
 
+# Use for asynchronous I/O primitives for scalable network clients and servers
+# Fix: An error occurred while installing nio4r (2.5.8), and Bundler cannot continue.
+gem 'nio4r', '~> 2.5.9'
+
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails'
 
