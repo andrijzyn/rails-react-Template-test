@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '3.3.6'
 
 # Use a specific version of Rails to ensure compatibility
 gem 'rails'
@@ -16,10 +16,6 @@ gem 'pg', '~> 1.5', '>= 1.5.6'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma'
-
-# Use for asynchronous I/O primitives for scalable network clients and servers
-# Fix: An error occurred while installing nio4r (2.5.8), and Bundler cannot continue.
-gem 'nio4r', '~> 2.5.9'
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails'
@@ -35,8 +31,6 @@ gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
-
-gem 'rubocop-discourse'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
@@ -66,14 +60,9 @@ group :development do
   gem 'web-console'
 
   gem 'rubocop', require: false
-  gem 'rubocop-capybara', require: false
-  gem 'rubocop-rails', require: false
 
   # Add speed badges
   gem 'rack-mini-profiler'
-
-  # Speed up commands on slow machines / big apps
-  gem 'spring'
 end
 
 group :test do
