@@ -1,9 +1,13 @@
 AllCops:
+  SuggestExtensions: false
   NewCops: enable
-  SuggestExtensions: false # Отключает советы по установке расширений
   Exclude:
-    - 'db/schema.rb'      # Исключение файла schema.rb из проверки
     - 'bin/**/*'
+
+inherit_gem:
+  rubocop-github:
+    - config/default.yml # generic Ruby rules and cops
+    - config/rails.yml # Rails-specific rules and cops
 
 Gemspec/AddRuntimeDependency:
   Enabled: true
