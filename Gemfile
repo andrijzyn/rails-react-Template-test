@@ -19,7 +19,7 @@ gem 'puma'
 
 # Use for asynchronous I/O primitives for scalable network clients and servers
 # Fix: An error occurred while installing nio4r (2.5.8), and Bundler cannot continue.
-gem 'nio4r', '~> 2.5.9'
+gem 'nio4r', '~> 2.7.4'
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails'
